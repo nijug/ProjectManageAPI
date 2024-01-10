@@ -21,6 +21,11 @@ jar {
     enabled = false
 }
 
+bootWar {
+    enabled = true
+    archiveClassifier.set('')
+}
+
 repositories {
     mavenCentral()
 }
