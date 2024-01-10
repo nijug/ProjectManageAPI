@@ -38,6 +38,9 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
+    implementation 'org.xerial:sqlite-jdbc:3.44.0.0'
+    implementation 'org.hibernate.orm:hibernate-community-dialects:6.4.0.CR1'
+
 }
 
 tasks.named('test') {
