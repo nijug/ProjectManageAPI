@@ -27,6 +27,13 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew clean build
 
+      - name: Delete -plain WAR file
+        run: |
+          for file in ${{ github.workspace }}/build/libs/*-plain.war; do
+            rm "$file"
+          done
+
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
