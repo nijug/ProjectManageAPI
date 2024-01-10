@@ -4,6 +4,7 @@ import com.example.projectmanage.model.repository.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
@@ -19,6 +20,7 @@ public class ProjectController {
         projectRepository.save(newProject);
         return ResponseEntity.status(HttpStatus.CREATED).body("Project saved");
     }
+
 
     @GetMapping("/all")
     public ResponseEntity<Iterable<Project>> getAllProjects() {
