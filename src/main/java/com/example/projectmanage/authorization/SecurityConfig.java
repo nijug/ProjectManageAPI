@@ -104,7 +104,7 @@ public class SecurityConfig {
         CorsConfiguration config = new CorsConfiguration();
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
-        config.addAllowedOrigin("http://127.0.0.1:8080/authorized");
+        config.addAllowedOrigin("http://127.0.0.1:8080");
         config.addAllowedOrigin("http://127.0.0.1:4200");
         config.setAllowCredentials(true);
         source.registerCorsConfiguration("/**", config);
